@@ -79,9 +79,6 @@
       </div>
    </section>
 
-
-   <input type="text" id="a">
-
    <script>
 
       // phone-prize calculation
@@ -95,16 +92,13 @@
          document.getElementById("phoneAmount").value = totalPhoneAmount;
          const totalPhonePrize = productPrize(totalPhoneAmount, 1219);
          document.getElementById("phonePrize").innerText = totalPhonePrize;
-
+         
          const casePrize = parseInt(document.getElementById("casePrize").innerText);
          const subTotal = totalPhonePrize + casePrize
          document.getElementById("subTotal").innerText = subTotal;
          document.getElementById("taxAmount").innerText = taxAmount(subTotal);
          
-
          document.getElementById("totalAmount").innerText = Math.ceil(subTotal +  taxAmount(subTotal));
-
-
       });
       // remove-phone
       const removePhone = document.getElementById("removePhoneBtn");
@@ -140,7 +134,6 @@
          document.getElementById("casePrize").innerText = totalCasePrize;
 
          const phonePrize = parseInt(document.getElementById("phonePrize").innerText);
-
          const subTotal = phonePrize + totalCasePrize;
          document.getElementById("subTotal").innerText = subTotal;
          document.getElementById("taxAmount").innerText = taxAmount(subTotal);
@@ -159,12 +152,11 @@
             const totalCasePrize = productPrize(totalCaseAmount, 59);
             document.getElementById("casePrize").innerText = totalCasePrize;
 
-
             const phonePrize = parseInt(document.getElementById("phonePrize").innerText);
-
             const subTotal = phonePrize + totalCasePrize;
             document.getElementById("subTotal").innerText = subTotal;
             document.getElementById("taxAmount").innerText = taxAmount(subTotal);
+
             document.getElementById("totalAmount").innerText = Math.ceil(subTotal + taxAmount(subTotal));
 
          } else {
